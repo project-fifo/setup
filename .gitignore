@@ -8,3 +8,6 @@ setup.plt
 .rebar/
 xtest/*/.rebar/
 erl_crash.dump
+doc/*.md
+_build
+xtest/*/rebar.lock

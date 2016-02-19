@@ -152,6 +152,7 @@
          lib_dirs/0, lib_dirs/1]).
 -export([read_config_script/3]).
 
+-export([main/1]).
 -export([ok/1]).
 -compile(export_all).
 
@@ -162,6 +163,10 @@
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
 -endif.
+
+%% @doc We need this for escriptize
+main(A) ->
+  setup_gen:main(A).
 
 %% @spec home() -> Directory
 %% @doc Returns the configured `home' directory, or a best guess (`$CWD')
